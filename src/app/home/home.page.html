@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Form
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card-content>
+      <ion-input  label="NIK" type="number" expand="block" [(ngModel)]="form.nik" label-placement="floating"
+        fill="outline" placeholder="NIK"></ion-input>
+      <br>
+      <ion-input  label="Nama" type="text" expand="block" [(ngModel)]="form.nama" label-placement="floating"
+      fill="outline" placeholder="Nama"></ion-input>
+      <br>
+      <ion-input  label="Alamat" type="text" expand="block" [(ngModel)]="form.alamat" label-placement="floating"
+      fill="outline" placeholder="Nomor Induk Siswa"></ion-input>
+      <br>
+      <ion-input  label="Kelurahan / Desa" type="text" expand="block" [(ngModel)]="form.kel" label-placement="floating"
+      fill="outline" placeholder="Kelurahan / Desa"></ion-input>
+      <br>
+      <ion-input  label="Kecamatan" type="text" expand="block" [(ngModel)]="form.kec" label-placement="floating"
+      fill="outline" placeholder="Kecamatan"></ion-input>
+      <ion-datetime-button datetime="date"></ion-datetime-button>
+      <br>
+      <ion-button color="success" (click)="sendToWhatssapp()" shape="round">WhatsApp</ion-button>
+      <br>
+      <ion-button color="primary" (click)="sendToTelegram()" shape="round">Telegram</ion-button>
+      <br>
+      <ion-button color="danger" (click)="sendToEmail()" shape="round">Email</ion-button>
+    </ion-card-content>
+    </div>
+</ion-content>
